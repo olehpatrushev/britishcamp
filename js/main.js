@@ -18,10 +18,11 @@ const showSome = (index = 0) => {
 
 showSome(0);
 
-$('.screen').on('click', function () {
-  $(this).hide();
-  if ($(this).next().length) {
-    $(this).next().show();
+$('button.btn-continue').on('click', function () {
+  const screen = $(this).parents('.screen');
+  screen.hide();
+  if (screen.next().length) {
+    screen.next().show();
   } else {
     showSome();
   }

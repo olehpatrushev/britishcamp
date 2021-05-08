@@ -222,13 +222,13 @@ header {
       display: flex;
       flex-direction: column;
 
-      &.splash-desktop-only {
+      &.desktop-only {
         @include media-breakpoint-down(md) {
           display: none;
         }
       }
 
-      &.splash-mobile-only {
+      &.mobile-only {
         @include media-breakpoint-up(md) {
           display: none;
         }
@@ -236,23 +236,23 @@ header {
 
       &.splash-mobile {
         background-image: url("/img/common/splash-mobile.svg");
-        top: 0;
-        left: 50%;
-        margin-left: -50vmin;
-        width: 100vmin;
-        height: 100vmin;
+        width: 100vw;
+        height: 100vh;
+        min-width: 300px;
+        min-height: 300px;
         padding-bottom: 5vmin;
-        font-size: 3vmin;
-        font-size: min(3vmin, 18px);
+        font-size: 2.7vmin;
+        font-size: clamp(10px, 2.7vmin, 18px);
         max-height: 70vh;
 
         .text-hello {
           font-size: 5vmin;
+          font-size: max(10px, 5vmin);
           margin-bottom: 3vmin;
         }
 
         .btn-continue {
-          font-size: min(3vmin, 18px);
+          font-size: clamp(10px, 3vmin, 18px);
         }
       }
     }
