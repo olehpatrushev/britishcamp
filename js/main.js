@@ -12,17 +12,22 @@ mainMenuEl.addEventListener('hidden.bs.collapse', function (event) {
 });
 
 const showSome = (index = 0) => {
+  if (index >= 0 && index < 7) {
+    $('body').addClass('intro');
+  } else {
+    $('body').removeClass('intro');
+  }
   $('.screen').hide();
   $($('.screen').get(index)).show();
 }
 
-showSome(0);
+showSome(7);
 
-$('button.btn-continue').on('click', function () {
-  const screen = $(this).parents('.screen');
-  screen.hide();
+$('.screen').on('dblclick', function () {
+  const screen = $(this);
   if (screen.next().length) {
-    screen.next().show();
+    const index = $('.content .screen').index(screen);
+    showSome(index + 1)
   } else {
     showSome();
   }
