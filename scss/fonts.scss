@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Peace Sans';
+  src: url("/fonts/Peace Sans/Peace Sans.otf");
+}
+
+@font-face {
+  font-family: 'Comic Sans';
+  src: url("/fonts/Comic Sans MS.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url("/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@mixin font-peace-sans {
+  font-family: 'Peace Sans', sans-serif;
+}
+
+@mixin font-comic-sans {
+  font-family: 'Peace Sans', sans-serif;
+}
+
+@mixin font-roboto-condensed {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin font-roboto {
+  font-family: 'Roboto', sans-serif;
+}

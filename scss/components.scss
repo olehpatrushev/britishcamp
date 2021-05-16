@@ -1,0 +1,51 @@
+@mixin text-stroke($color:white) {
+  @supports (-webkit-text-stroke: 1px $color) {
+    -webkit-text-stroke: 1px $color;
+  }
+}
+
+.text-hello {
+  font-family: "Comic Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.5vmin;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF9D27;
+  @include text-stroke(black);
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+.btn-continue {
+  text-transform: uppercase;
+  margin-top: 3vmin;
+  background: #FFBB00;
+  border-radius: 3vmin;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.3vmin solid;
+  border-color: #BA8800;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2vmin;
+  padding: 1vmin 9vmin 1vmin 5vmin;
+
+  .controller-icon {
+    display: inline-block;
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("/img/common/button.svg");
+    margin-left: 1vmin;
+    margin-top: -2vmin;
+  }
+}

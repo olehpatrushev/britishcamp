@@ -1,0 +1,31 @@
+header {
+  .navbar {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    .custom-navbar-toggler {
+      border: 0;
+      background: transparent;
+      z-index: 1000;
+      padding: 0;
+
+      .navbar-toggler-icon {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &[aria-expanded="false"] {
+        .navbar-toggler-icon {
+          background-image: url("/img/common/menu-mobile.svg");
+        }
+      }
+
+      &[aria-expanded="true"] {
+        .navbar-toggler-icon {
+          background-image: url("/img/common/menu-mobile-collapse.svg");
+        }
+      }
+    }
+  }
+}

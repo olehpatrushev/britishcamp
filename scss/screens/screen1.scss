@@ -1,0 +1,33 @@
+.content {
+  .screen-1 {
+    background-image: url("/img/screen1/splash.svg");
+    background-size: 100% 100%;
+    background-position-x: 3vmin;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-down(md) {
+      background-image: url("/img/screen1/splash-mobile.svg");
+      background-position: center center;
+    }
+
+    .title {
+      font-family: 'Peace Sans', sans-serif;
+      font-size: 6.2vmin;
+      color: #FB5B00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      @include text-stroke(white);
+    }
+
+    .info {
+      font-family: 'Peace Sans', sans-serif;
+      color: #00AE90;
+      font-size: 3vmin;
+      text-shadow: 2px 0 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

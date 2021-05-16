@@ -1,0 +1,97 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "components";
+@import "utilities";
+@import "fonts";
+@import "menu";
+@import "header";
+@import "screens/_all";
+
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  &.intro {
+    background: url("/img/common/intro-background.png");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  @include media-breakpoint-down(md) {
+    &.menu-opened {
+      .content {
+        display: none;
+      }
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &.no-scroll {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    &.screen-with-man {
+      background-image: url("/img/common/intro-man.png");
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: auto 70%;
+
+      @include media-breakpoint-down(md) {
+        background-size: auto 50%;
+      }
+    }
+
+    .splash {
+      position: absolute;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+
+      &.splash-mobile {
+        background-image: url("/img/common/splash-mobile.svg");
+        width: 100vw;
+        height: 100vh;
+        min-width: 300px;
+        min-height: 300px;
+        padding-bottom: 5vmin;
+        font-size: 2.7vmin;
+        font-size: clamp(10px, 2.7vmin, 18px);
+        max-height: 70vh;
+
+        .text-hello {
+          font-size: 5vmin;
+          font-size: max(10px, 5vmin);
+          margin-bottom: 3vmin;
+        }
+
+        .btn-continue {
+          font-size: 3vmin;
+          font-size: clamp(10px, 3vmin, 18px);
+        }
+      }
+    }
+  }
+}

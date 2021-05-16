@@ -1,0 +1,29 @@
+.content {
+  .screen-5 {
+    .splash-left {
+      background-image: url("/img/common/splash1.svg");
+      left: 50%;
+      top: 50%;
+      margin-left: -60vmin;
+      margin-top: -50vmin;
+      width: 50vmin;
+      height: 50vmin;
+      padding-left: 10vmin;
+      padding-top: 3vmin;
+      font-size: 1.5vmin;
+    }
+
+    .splash-right {
+      background-image: url("/img/common/splash4.svg");
+      left: 50%;
+      top: 50%;
+      margin-left: 10vmin;
+      margin-top: -40vmin;
+      width: 70vmin;
+      height: 70vmin;
+      font-size: 1.5vmin;
+      padding-bottom: 7vmin;
+      padding-right: 5vmin;
+    }
+  }
+}
