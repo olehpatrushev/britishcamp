@@ -4,6 +4,10 @@
   }
 }
 
+@mixin text-shadow() {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .text-hello {
   font-family: "Comic Sans", sans-serif;
   font-style: normal;
