@@ -23,7 +23,10 @@ const showSome = (index = 0) => {
 
 showSome(7);
 
-$('.screen').on('dblclick', function () {
+$('.screen').on('dblclick mousedown doubletap', function (event) {
+  if(event.type == 'mousedown' && event.which != 2) {
+    return;
+  }
   const screen = $(this);
   if (screen.next().length) {
     const index = $('.content .screen').index(screen);

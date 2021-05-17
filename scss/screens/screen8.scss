@@ -12,10 +12,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        height: 50vh;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        margin-bottom: -25vh;
+        height: 30vh;
       }
 
       .thinking-cloud {
@@ -23,7 +20,7 @@
 
         position: absolute;
         right: 0;
-        bottom: 10vh;
+        bottom: 30vh;
         width: 340px;
         height: auto;
         font-size: 12px;
@@ -32,7 +29,6 @@
         padding-bottom: 100px;
         padding-right: 60px;
         padding-left: 60px;
-        margin-bottom: 50%;
         background-image: url("/img/common/thinking-cloud.png");
         background-position: center;
         background-size: contain;
